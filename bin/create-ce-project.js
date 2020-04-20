@@ -11,7 +11,7 @@ const utils = require('../lib/utils');
   console.log(chalk.yellow(figlet.textSync('Repo Automation')));
 
   try {
-    if (files.getCurrentDirectoryBase(files.fileExists('.git'))) {
+    if (files.fileExists('.git')) {
       console.log(chalk.red('Oops! You are in an directory with an existing .git file'));
       const { isAlreadyGit } = await inputs.errors.exisitingGitRepo();
 
