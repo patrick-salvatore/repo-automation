@@ -2,23 +2,23 @@
 const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
-const files = require('./lib/files');
-const inputs = require('./lib/inputs');
-const utils = require('./lib/utils');
+const files = require('../lib/files');
+const inputs = require('../lib/inputs');
+const utils = require('../lib/utils');
 
 (async function init() {
   clear();
   console.log(chalk.yellow(figlet.textSync('Repo Automation')));
 
   try {
-    // if (files.fileExists('.git')) {
-    //   console.log(chalk.red('Oops! You are in an directory with an existing .git file'));
-    //   const { isAlreadyGit } = await inputs.errors.exisitingGitRepo();
+    if (files.getCurrentDirectoryBase(files.fileExists('.git'))) {
+      console.log(chalk.red('Oops! You are in an directory with an existing .git file'));
+      const { isAlreadyGit } = await inputs.errors.exisitingGitRepo();
 
-    //   if (String(isAlreadyGit)) {
-    //     isAlreadyGit.toLowerCase() === 'yes' ? utils.removeGit() : process.exit();
-    //   }
-    // }
+      if (String(isAlreadyGit)) {
+        isAlreadyGit.toLowerCase() === 'yes' ? utils.removeGit() : process.exit();
+      }
+    }
 
     console.log(chalk.green('Ready to start!'));
     const repoInputs = await inputs.repo();
