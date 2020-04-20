@@ -42,8 +42,7 @@
   },
   "scripts": {
     "start": "babel-node bin/create-ce-project.js",
-    "build": "babel bin/create-ce-project.js --out-file dist/index.compiled.js",
-    "publish": "yarn run build && yarn run publish"
+    "build": "babel bin/create-ce-project.js --out-file dist/index.compiled.js"
   },
   "repository": {
     "type": "git",
