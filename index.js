@@ -11,14 +11,14 @@ const utils = require('./lib/utils');
   console.log(chalk.yellow(figlet.textSync('Repo Automation')));
 
   try {
-    if (files.fileExists('.git')) {
-      console.log(chalk.red('Oops! You are in an directory with an existing .git file'));
-      const { isAlreadyGit } = await inputs.errors.exisitingGitRepo();
+    // if (files.fileExists('.git')) {
+    //   console.log(chalk.red('Oops! You are in an directory with an existing .git file'));
+    //   const { isAlreadyGit } = await inputs.errors.exisitingGitRepo();
 
-      if (String(isAlreadyGit)) {
-        isAlreadyGit.toLowerCase() === 'yes' ? utils.removeGit() : process.exit();
-      }
-    }
+    //   if (String(isAlreadyGit)) {
+    //     isAlreadyGit.toLowerCase() === 'yes' ? utils.removeGit() : process.exit();
+    //   }
+    // }
 
     console.log(chalk.green('Ready to start!'));
     const repoInputs = await inputs.repo();
@@ -35,5 +35,3 @@ const utils = require('./lib/utils');
     process.exit();
   }
 })();
-
-// https://github.com/polpenaloza/ce-webpack.git
