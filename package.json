@@ -3,8 +3,8 @@
   "author": "Patrick Salvatore <salvatorepat8@gmail.com>",
   "version": "1.1.2",
   "license": "MIT",
-  "main": "bin/create-ce-project.js",
-  "bin": "bin/create-ce-project.js",
+  "main": "dist/index.compiled.js",
+  "bin": "dist/index.compiled.js",
   "files": [
     "lib",
     ".babelrc"
@@ -42,7 +42,8 @@
   },
   "scripts": {
     "start": "babel-node bin/create-ce-project.js",
-    "build": "babel bin/create-ce-project.js --out-file dist/create-ce-project-compiled.js"
+    "build": "babel bin/create-ce-project.js --out-file dist/index.compiled.js",
+    "publish": "yarn run build && yarn run publish"
   },
   "repository": {
     "type": "git",
