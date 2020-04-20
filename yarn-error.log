@@ -30,17 +30,11 @@ npm manifest:
   {
     "name": "create-ce-project",
     "author": "Patrick Salvatore <salvatorepat8@gmail.com>",
-    "version": "1.0.0",
-    "main": "index.js",
+    "version": "1.0.2",
     "license": "MIT",
-    "bin": {
-      "create-ce-project": "index.js"
-    },
+    "bin": "./bin/create-ce-project.js",
     "files": [
-      "lib",
-      ".babelrc",
-      ".eslintrc.js",
-      "index.js"
+      "lib"
     ],
     "keywords": [
       "amp",
@@ -71,13 +65,13 @@ npm manifest:
       "eslint-plugin-babel": "^5.3.0",
       "eslint-plugin-compat": "^3.5.1",
       "eslint-plugin-import": "^2.20.1",
-      "eslint-plugin-prettier": "^3.1.2",
       "eslint-plugin-node": "^11.1.0",
+      "eslint-plugin-prettier": "^3.1.2",
       "eslint-watch": "^6.0.1",
       "prettier": "^1.19.1"
     },
     "scripts": {
-      "start": "babel-node index.js"
+      "start": "babel-node bin/create-ce-project.js"
     }
   }
 
