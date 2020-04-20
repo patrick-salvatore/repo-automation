@@ -1,10 +1,10 @@
 {
   "name": "create-ce-project",
   "author": "Patrick Salvatore <salvatorepat8@gmail.com>",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "license": "MIT",
-  "main": "dist/index.compiled.js",
-  "bin": "dist/index.compiled.js",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
   "files": [
     "lib",
     ".babelrc"
@@ -42,7 +42,8 @@
   },
   "scripts": {
     "start": "babel-node bin/create-ce-project.js",
-    "build": "babel bin/create-ce-project.js --out-file dist/index.compiled.js"
+    "build": "babel bin/create-ce-project.js --out-file dist/index.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
