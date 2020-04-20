@@ -22,8 +22,10 @@
     "inquirer": "^7.1.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -39,7 +41,8 @@
     "prettier": "^1.19.1"
   },
   "scripts": {
-    "start": "babel-node bin/create-ce-project.js"
+    "start": "babel-node bin/create-ce-project.js",
+    "build": "babel bin/create-ce-project.js --out-file dist/create-ce-project-compiled.js"
   },
   "repository": {
     "type": "git",
