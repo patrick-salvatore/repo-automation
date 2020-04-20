@@ -3,7 +3,10 @@
   "author": "Patrick Salvatore <salvatorepat8@gmail.com>",
   "version": "1.1.0",
   "license": "MIT",
-  "bin": "bin/create-ce-project.js",
+  "main": "bin/create-ce-project.js",
+  "bin": {
+    "create-ce-project": "bin/create-ce-project.js"
+  },
   "files": [
     "lib"
   ],
