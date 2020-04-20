@@ -1,7 +1,7 @@
 {
   "name": "create-ce-project",
   "author": "Patrick Salvatore <salvatorepat8@gmail.com>",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "main": "bin/create-ce-project.js",
   "bin": "bin/create-ce-project.js",
