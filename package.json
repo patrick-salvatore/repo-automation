@@ -40,5 +40,13 @@
   },
   "scripts": {
     "start": "babel-node bin/create-ce-project.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrick-salvatore/repo-automation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/patrick-salvatore/repo-automation.git/issues"
+  },
+  "homepage": "https://github.com/patrick-salvatore/repo-automation#readme"
 }
